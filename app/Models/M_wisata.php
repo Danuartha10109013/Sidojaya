@@ -12,6 +12,9 @@ class M_wisata extends Model
     protected $table = "wisata";
 
     protected $fillable = [
+        'name',
+        'email',
+        'password',
         'nama_wisata',
         'harga_tiket',
         'alamat',
@@ -21,5 +24,15 @@ class M_wisata extends Model
         'gmaps',
         'id_kategori',
         'id_galeri',
+        'id_user',
+        'bukti_pengelola'
     ];
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class, 'wisata_id');
+    }
+
+
+    
 }

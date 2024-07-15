@@ -5,15 +5,15 @@
         <section id="blog" class="blog">
             <div class="container" data-aos="fade-up">
                 <div class="row">
-                    <div class="col-lg-12 mt-5 entries">
+                    <di class="col-lg-12 mt-5 entries">
                         <article class="entry entry-single">
                             <div class="entry-img">
                                 @php
                                     $cek_foto = DB::table('galeri')
                                         ->where('id_wisata', '=', $data_wisata->id)
-                    ->get();
+                                        ->get();
                 
-                $gambar = DB::table('galeri')
+                                    $gambar = DB::table('galeri')
                                         ->where('id_wisata', '=', $data_wisata->id)
                                         ->first();
                                 @endphp
@@ -36,10 +36,9 @@
                                 <h3>Fasilitas Umum :</h3>
                                 {{ $data_wisata->fasilitas }}
 
-
                                 <hr>
                                 <h3 class="mb-4">Harga Tiket :</h3>
-                                <div class=row>
+                                <div class="row">
                                     <div class="col-sm-2">
                                         <div class="card border-primary text-center">
                                             <div class="card-body">
@@ -65,14 +64,83 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {{--  --}}
+                                </div>
+
+                                <!-- Ulasan Section -->
+                                <section id="ulasan" class="ulasan">
+                                    <div class="container" data-aos="fade-up">
+                                        <div class="row">
+                                            <div class="col-lg-12 mt-5">
+                                                <h2>Ulasan Pengunjung</h2>
+                                                @foreach($data_ulasan as $review)
+                                                <div class="card mt-3">
+                                                    <div class="card-body">
+                                                        <h5 class="card-title">{{ $review->nama }}</h5>
+                                                        <p class="card-text">
+                                                            @for ($i = 0; $i < $review->rating; $i++)
+                                                                &#9733; <!-- Unicode symbol for star -->
+                                                            @endfor
+                                                        </p>
+                                                        <p class="card-text">{{ $review->deskripsi }}</p>
+                                                    </div>
+                                                </div>
+                                                @endforeach
+                                            </div>
+                                        </div>
+                                    </div>
+                                </section><!-- End Ulasan Section -->
+
+                                <!-- Form ulasan -->
+                                @auth
+                                <div class="row mt-5">
+                                    <div class="col-lg-12">
+                                        <h3>Tulis Ulasan Anda</h3>
+                                        <form action="{{ route('review.store') }}" method="POST">
+                                            @csrf
+                                            <input type="hidden" name="nama" value="{{ auth()->user()->name }}">
+                                            <div style="display: flex; align-items: center;">
+                                                <strong style="margin-right: 10px;">Rating :</strong>
+                                                <div class="rating">
+                                                    @for ($i = 1; $i <= 5; $i++)
+                                                        <input type="radio" id="star{{ $i }}" name="rating" value="{{ $i }}"
+                                                            {{ old('rating') == $i ? 'checked' : '' }} />
+                                                        <label for="star{{ $i }}" title="{{ $i }} stars">&#9733;</label>
+                                                    @endfor
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="deskripsi">Ulasan:</label>
+                                                <textarea class="form-control" id="deskripsi" name="deskripsi" rows="3" required></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Kirim Ulasan</button>
+                                        </form>
+                                        <script>
+                                            document.addEventListener('DOMContentLoaded', function() {
+                                                const stars = document.querySelectorAll('.rating input[type="radio"]');
+                                                stars.forEach(star => {
+                                                    star.addEventListener('click', function() {
+                                                        let currentRating = this.value;
+                                                        stars.forEach(star => {
+                                                            star.checked = star.value <= currentRating;
+                                                            if (star.checked) {
+                                                                star.nextElementSibling.style.color = 'yellow';
+                                                            } else {
+                                                                star.nextElementSibling.style.color = 'gray';
+                                                            }
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                            
+                                        </script>
                                 </div>
                             </div>
-                            <hr>
+                            @endauth
                         </article><!-- End blog entry -->
-                    </div><!-- End blog comments -->
-                </div><!-- End blog entries list -->
-            </div>
-            </div>
+                    </div><!-- End blog entries list -->
+                </div><!-- End row -->
+            </div><!-- End container -->
         </section><!-- End Blog Single Section -->
     </main><!-- End #main -->
 @endsection

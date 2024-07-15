@@ -1,4 +1,4 @@
-@extends('template.backend.main')
+@extends('template.backend.mainsuper')
 @section('main')
     <!-- Header -->
     <!-- Header -->

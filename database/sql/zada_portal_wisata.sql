@@ -23,15 +23,15 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `event`;
 CREATE TABLE `event`  (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nama_event` varchar(50) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL DEFAULT '',
+  `nama_event` varchar(50) CHARACTER SET  utf8mb4 COLLATE  utf8mb4_unicode_ci NOT NULL DEFAULT '',
   `tanggal_mulai` date NOT NULL,
   `tanggal_selesai` date NULL DEFAULT NULL,
-  `keterangan` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL,
+  `keterangan` text CHARACTER SET  utf8mb4 COLLATE  utf8mb4_unicode_ci NOT NULL,
   `id_wisata` int(11) NOT NULL,
   PRIMARY KEY (`id`) USING BTREE,
   INDEX `FK_event_wisata`(`id_wisata`) USING BTREE,
   CONSTRAINT `FK_event_wisata` FOREIGN KEY (`id_wisata`) REFERENCES `wisata` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
-) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 6 CHARACTER SET =  utf8mb4 COLLATE =  utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of event

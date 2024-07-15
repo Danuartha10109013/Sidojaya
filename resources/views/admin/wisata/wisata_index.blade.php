@@ -9,9 +9,9 @@
                     <div class="col-lg-6 col-7">
                         <h6 class="h2 text-white d-inline-block mb-0">Data Wisata</h6>
                     </div>
-                    <div class="col-lg-6 col-5 text-right">
+                    {{-- <div class="col-lg-6 col-5 text-right">
                         <a href="{{ route('add-wisata') }}" class="btn btn-sm btn-success">Tambah Data</a>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -62,24 +62,25 @@
                                             ->first();
                                     @endphp
                                     <tr>
-                                        <th scope="row">{{ $loop->iteration }}</th>
+                                       <th scope="row">{{ $loop->iteration }}</th>
                                         <td>
                                             @if ($cek_foto->isEmpty())
                                                 {{ 'Gambar Kosong' }}
                                             @else
                                                 <img src="{{ asset('img/galeri/' . $gambar->nama_gambar) }}" alt=""
                                                     title="" width="30%">
-                                            @endif
-
+                                            @endif 
+                                            {{-- <img src="{{ asset('img/galeri/' . $data->img) }}" width="30%" alt=""> --}}
                                         </td>
                                         <td>{{ $data->nama_wisata }}</td>
                                         <td>Rp.{{ number_format($data->harga_tiket) }}</td>
                                         <td>{{ $data->kontak_pengelola }}</td>
                                         <td>
+                                            {{-- <a class="btn btn-warning" href="{{ route('edit-wisata', $data->id) }}">Edit</a>
+                                            <a class="btn btn-danger" href="">Delete</a> --}}
 
 
-
-                                            {{ $data->nama_gambar }}
+                                            {{-- {{ $gambar->nama_gambar }} --}}
                                             @if ($cek_foto->isEmpty())
                                                 <a href="{{ route('foto-upload', $data->id) }}"
                                                     class="btn btn-sm btn-info">Upload Gambar</a>
@@ -92,9 +93,9 @@
                                             <a href="{{ route('detail-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-primary">Detail</a>
                                             <a href="{{ route('edit-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-warning">edit</a>
-                                            <a href="{{ route('delete-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-danger">hapus</a>
+                                                class="btn btn-sm btn-warning">edit</a> 
+                                            {{-- <a href="{{ route('delete-wisata', $data->id) }}"
+                                                class="btn btn-sm btn-danger">hapus</a> --}}
                                         </td>
                                     </tr>
                                 @endforeach

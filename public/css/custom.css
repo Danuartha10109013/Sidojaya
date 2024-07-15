@@ -1,0 +1,65 @@
+custom.css
+
+/* Style untuk body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f9; /* Warna latar belakang biru muda */
+    margin: 0;
+    padding: 0;
+}
+
+/* Style untuk container */
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: #0a3a6a; /* Warna latar belakang biru tua */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Style untuk header */
+h2 {
+    text-align: center;
+    color: #fff; /* Warna teks putih */
+}
+
+/* Style untuk label */
+label {
+    font-weight: bold;
+    color: #fff; /* Warna teks putih */
+}
+
+/* Style untuk input dan textarea */
+input[type="text"],
+input[type="email"],
+textarea,
+input[type="number"],
+input[type="date"],
+input[type="text"][readonly] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    background-color: #fff; /* Warna latar belakang input putih */
+    color: #333; /* Warna teks hitam */
+}
+
+/* Style untuk tombol "Pesan" */
+.btn-primary {
+    background-color: #3889df; /* Warna latar belakang biru tua */
+    color: #fff; /* Warna teks putih */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #004080; /* Warna latar belakang biru tua saat dihover */
+}

@@ -28,12 +28,16 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 m-auto">
                     <div class="card">
-                        <div class="card-header"> <img src="{{ url('backend/assets/img/brand/brand.png') }}"
-                                alt="..."></div>
-                        <div class="card-body">
+                    <div class="card-header">
+                        <img src="{{ url('backend/assets/img/brand/brand.png') }}" alt="..." style="display: block; margin: 0 auto;">
+                    </div>
+                <div class="card-body">
+    <!-- Your card body content here -->
+                </div>
+
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
-                                <div class="row mb-3">
+                                <div class="row mb-3 text-left ml-3" style="widht : 80%">
                                     <label for="email"
                                         class="col-md-4 col-form-label text-md-end">{{ __('E-Mail Address') }}</label>
                                     <div class="col-md-6">
@@ -47,7 +51,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="row mb-3">
+                                <div class="row mb-3 text-left ml-3" style="widht : 80%">
                                     <label for="password"
                                         class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
                                     <div class="col-md-6">
@@ -72,12 +76,19 @@
                                         </div>
                                     </div>
                                 </div> --}}
-                                <div class="row mb-0">
+                                <div class="row mb-0 ml-3">
                                     <div class="col-md-8 offset-md-4">
                                         <button type="submit" class="btn btn-primary">
                                             {{ __('Login') }}
                                         </button>
                                        
+                                    </div>
+                                </div>
+                                <!-- <div class="row mb-3">
+                                    <label for="password"
+                                        class="col-md-4 col-form-label text-md-end">{{ __('Belum memiliki akun? buat akun') }}</label>
+                                    <div class="col-md-6">
+                                </div>        -->
                                     </div>
                                 </div>
                             </form>

@@ -11,15 +11,44 @@
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <!-- Nav items -->
                 <ul class="navbar-nav">
+                    
 
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-wisata') ? 'active' : '' }}"
                             href={{ route('manajemen-wisata') }}>
                             <i class="fa fa-map-signs text-orange"></i>
-                            <span class="nav-link-text">Data Wisata</span>
+                            <span class="nav-link-text">Kelola Wisata</span>
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->is('adm/manajemen-tiket') ? 'active' : '' }}"
+                            href={{ route('manajemen-tiket') }}>
+                            <i class="fa fa-map-signs text-orange"></i>
+                            <span class="nav-link-text">Kelola Tiket</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('adm/manajemen-penginapan') ? 'active' : '' }}"
+                            href={{ route('manajemen-penginapan') }}>
+                            <i class="fa fa-map-signs text-orange"></i>
+                            <span class="nav-link-text">Kelola Penginapan</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('adm/manajemen-laporan') ? 'active' : '' }}"
+                            href={{ route('manajemen-laporan') }}>
+                            <i class="fa fa-map-signs text-orange"></i>
+                            <span class="nav-link-text">Laporan Tiket</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->is('adm/manajemen-laporanpenginapan') ? 'active' : '' }}"
+                            href={{ route('manajemen-laporanpenginapan') }}>
+                            <i class="fa fa-map-signs text-orange"></i>
+                            <span class="nav-link-text">Laporan Penginapan</span>
+                        </a>
+                    </li>
+                    {{-- <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-kategori-wisata') ? 'active' : '' }}"
                             href="{{ route('manajemen-kategori-wisata') }}">
                             <i class="fa fa-landmark text-primary"></i>
@@ -39,7 +68,7 @@
                             <i class="fa fa-restroom text-info"></i>
                             <span class="nav-link-text">Fasilitas</span>
                         </a>
-                    </li>
+                    </li> --}}
                
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">

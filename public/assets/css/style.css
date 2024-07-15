@@ -2076,3 +2076,67 @@ section {
 #footer .credits a:hover {
   color: white;
 }
+
+/* Styling for review section */
+#ulasan {
+  padding: 60px 0;
+}
+
+#ulasan .card {
+  background: #f8f9fa;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+#ulasan .card-body {
+  padding: 20px;
+}
+
+#ulasan .card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+#ulasan .card-text {
+  color: #666;
+  font-size: 16px;
+}
+
+#ulasan .card-text .rating {
+  color: #ffc107; /* Yellow color for stars */
+  font-size: 18px;
+}
+
+#ulasan .card-text .rating .fa-star {
+  margin-right: 5px;
+}
+
+/* CSS untuk bintang */
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 30px;
+  color: yellow; /* Warna bintang default */
+  cursor: pointer;
+}
+
+/* CSS untuk bintang */
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 24px; /* Ukuran ikon bintang */
+  color: gray; /* Warna default untuk bintang yang tidak dipilih */
+  cursor: pointer;
+}
+
+.rating input[type="radio"]:checked ~ label {
+  color: yellow; /* Mengubah warna bintang yang dipilih menjadi kuning */
+}
+

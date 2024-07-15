@@ -1,3 +1,4 @@
+
 @extends('template.backend.main')
 @section('main')
     <!-- Header -->
@@ -33,6 +34,12 @@
                             <div class="pl-lg-4">
                                 <div class="row">
                                     <div class="col-lg-6">
+                                        {{-- <div class="form-group">
+                                            <label class="form-control-label">Gambar</label>
+                                            <img src="{{ asset('img/galeri/' . $data_wisata->id) }}" width="30%" alt="">
+                                            <input type="file" class="form-control" name="nama_wisata"
+                                                value="{{ $data_wisata->img }}" >
+                                        </div> --}}
                                         <div class="form-group">
                                             <label class="form-control-label">Nama Wisata</label>
                                             <input type="text" class="form-control" name="nama_wisata"

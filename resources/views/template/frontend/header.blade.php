@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Informasi Wisata Kabupaten - Kalimantan Barat</title>
+  <title>Informasi Wisata Kabupaten Subang</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <!-- Favicons -->
@@ -27,7 +27,7 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex align-items-center">
-      <h1 class="logo me-auto"> <img src="{{ url('backend/assets/img/brand/brand.png') }}" alt="..."></h1>
+      <h1 class="logo me-auto"> <img src="{{ url('backend/assets/img/brand/brand.png') }}" alt="..." style="max-width: 500px; height: auto;"></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         @include('template.frontend.menu')

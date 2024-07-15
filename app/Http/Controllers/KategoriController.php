@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Route;
 use App\Models\M_kategori;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KategoriController extends Controller
 {
@@ -12,9 +13,11 @@ class KategoriController extends Controller
         $data_kategori = M_kategori::all();
         return view('admin.kategori.kategori_index',[
             'data_kategori' => $data_kategori 
+
         ]);
-     
     }
+
+
     public function add()
     {
         return view('admin.kategori.kategori_add');
@@ -101,4 +104,19 @@ class KategoriController extends Controller
         }
     }
 
+    public function cari(Request $request)
+{
+    $keyword = $request->query('keyword');
+    $kategoriId = $request->query('id_kategori');
+    
+    $kategori = M_kategori::find($kategoriId);
+    $wisata = DB::table('wisata')
+                ->where('nama_wisata', 'like', '%' . $keyword . '%')
+                ->where('id_kategori', $kategoriId)
+                ->paginate(10); 
+    
+    return view('kategori', ['wisata' => $wisata, 'data_kategori_id' => $kategori]);
+}
+
+    
 }

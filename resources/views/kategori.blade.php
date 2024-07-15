@@ -8,8 +8,13 @@
                 <div class="clearfix"></div>
                 <div class="clearfix"></div>
                 <div class="row mt-5 mb-5">
-                    <h4>Kategori Wisata : {{ $data_kategori_id->nama_kategori }}</h4>
-
+                    {{-- <h4>Kategori Wisata : {{ $data_kategori_id->nama_kategori }}</h4> --}}
+                    <h4>Kategori Wisata : {{ $data_kategori_id->nama_kategori ?? 'Kategori Tidak Ditemukan' }}</h4> 
+                    {{-- <form action="{{ route('kategori.cari') }}" method="GET" class="d-flex" role="search">
+                        <input type="hidden" name="id_kategori" value="{{ $data_kategori_id ? $data_kategori_id->id : '' }}">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="keyword" value="{{ old('keyword') }}">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>                     --}}
                     @if ($wisata->count() > 0)
                         @foreach ($wisata as $data)
                             @php
@@ -44,10 +49,11 @@
                         @endforeach
                     @else
                         <div class=" m-auto alert alert-primary text-center" role="alert">
-                            <h5>;( Maaf kami belum memiliki data untuk kategori ini ..</h5>
+                            <h5>;( Maaf kami belum memiliki data untuk kategori ini ..)</h5>
                         </div>
                     @endempty
             </div>
+
         </div>
         </div>
     </section><!-- End Services Section -->
