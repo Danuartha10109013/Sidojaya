@@ -42,8 +42,8 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">No</th>
-                                    <th>FOTO</th>
+                                    <th scope="col">NO</th>
+                                    <th scope="col">FOTO</th>
                                     <th scope="col">NAMA WISATA</th>
                                     <th scope="col">HTM</th>
                                     <th scope="col">KONTAK PENGELOLA</th>
@@ -55,21 +55,21 @@
                                     @php
                                         $cek_foto = DB::table('galeri')
                                             ->where('id_wisata', '=', $data->id)
-                                    ->get();
-                                
-                                $gambar = DB::table('galeri')
+                                            ->get();
+
+                                        $gambar = DB::table('galeri')
                                             ->where('id_wisata', '=', $data->id)
                                             ->first();
                                     @endphp
                                     <tr>
-                                       <th scope="row">{{ $loop->iteration }}</th>
+                                        <th scope="row">{{ $loop->iteration }}</th>
                                         <td>
                                             @if ($cek_foto->isEmpty())
                                                 {{ 'Gambar Kosong' }}
                                             @else
                                                 <img src="{{ asset('img/galeri/' . $gambar->nama_gambar) }}" alt=""
-                                                    title="" width="30%">
-                                            @endif 
+                                                    title="" width="100%">
+                                            @endif
                                             {{-- <img src="{{ asset('img/galeri/' . $data->img) }}" width="30%" alt=""> --}}
                                         </td>
                                         <td>{{ $data->nama_wisata }}</td>
@@ -87,13 +87,16 @@
                                             @else
                                                 <a href="{{ route('foto-edit', $data->id) }}"
                                                     class="btn btn-sm btn-dark">Edit Gambar</a>
-                                                    <a href="{{ route('foto-hapus', $gambar->id) }}"
-                                                        class="btn btn-danger btn-sm">hapus gambar</a>
+                                                <br>
+                                                <a href="{{ route('foto-hapus', $gambar->id) }}"
+                                                    class="btn btn-danger btn-sm">hapus gambar</a>
                                             @endif
+                                            <br>
                                             <a href="{{ route('detail-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-primary">Detail</a>
+                                            <br>
                                             <a href="{{ route('edit-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-warning">edit</a> 
+                                                class="btn btn-sm btn-warning">edit</a>
                                             {{-- <a href="{{ route('delete-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-danger">hapus</a> --}}
                                         </td>

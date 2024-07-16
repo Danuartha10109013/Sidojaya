@@ -38,7 +38,8 @@
                                             <div class="card text-white bg-secondary  text-center">
                                                 <div class="card-body">
                                                     <h6>KONTAK</h6>
-                                                    <h6>HP : {{ $data->kontak_pengelola }}</h6>
+                                                    <h6>{{ $data->kontak_pengelola }}</h6>
+                                                    {{-- <h6>HP : {{ $data->kontak_pengelola }}</h6> --}}
                                                 </div>
                                             </div>
                                         </div>
@@ -46,7 +47,8 @@
                                             <div class="card text-white bg-success text-center">
                                                 <div class="card-body">
                                                     <h6>MAPS</h6>
-                                                    <a href="https://maps.google.com/?q={{ $data->gmaps }}" target=_blank class="text-white">Klik disini</a>
+                                                    <a href="https://maps.google.com/?q={{ $data->gmaps }}" target=_blank
+                                                        class="text-white">Klik disini</a>
                                                 </div>
                                             </div>
                                         </div>

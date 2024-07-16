@@ -42,8 +42,9 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
-                                    <th scope="col">No</th>
-                                    <th>FOTO</th>
+                                    <th scope="col">NO</th>
+                                    <th scope="col">FOTO</th>
+                                    {{-- <th>FOTO</th> --}}
                                     <th scope="col">NAMA WISATA</th>
                                     <th scope="col">HTM</th>
                                     <th scope="col">KONTAK PENGELOLA</th>
@@ -55,9 +56,9 @@
                                     @php
                                         $cek_foto = DB::table('galeri')
                                             ->where('id_wisata', '=', $data->id)
-                                    ->get();
-                                
-                                $gambar = DB::table('galeri')
+                                            ->get();
+
+                                        $gambar = DB::table('galeri')
                                             ->where('id_wisata', '=', $data->id)
                                             ->first();
                                     @endphp
@@ -68,7 +69,7 @@
                                                 {{ 'Gambar Kosong' }}
                                             @else
                                                 <img src="{{ asset('img/galeri/' . $gambar->nama_gambar) }}" alt=""
-                                                    title="" width="30%">
+                                                    title="" width="100%">
                                             @endif
 
                                         </td>
@@ -94,7 +95,7 @@
                                             <a href="{{ route('edit-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-warning">edit</a> --}}
                                             <a href="{{ route('delete-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-danger">hapus</a> 
+                                                class="btn btn-sm btn-danger">hapus</a>
                                         </td>
                                     </tr>
                                 @endforeach

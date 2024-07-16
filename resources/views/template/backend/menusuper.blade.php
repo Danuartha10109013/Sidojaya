@@ -11,7 +11,7 @@
             <div class="collapse navbar-collapse" id="sidenav-collapse-main">
                 <!-- Nav items -->
                 <ul class="navbar-nav">
-                    
+
                     <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-akun') ? 'active' : '' }}"
                             href={{ route('manajemen-akun') }}>
@@ -54,11 +54,12 @@
                             <span class="nav-link-text">Kelola AboutUS</span>
                         </a>
                     </li>
-               
+
                     <li class="nav-item">
                         <a class="nav-link" href="/logout">
                             <i class="fa fa-sign-out-alt text-danger"></i>
-                            <span class="nav-link-text text-danger">(logout)</span>
+                            {{-- <span class="nav-link-text text-danger">(logout)</span> --}}
+                            <span class="nav-link-text text-danger">Logout</span>
                         </a>
                     </li>
                 </ul>

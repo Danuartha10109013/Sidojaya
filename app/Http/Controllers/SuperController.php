@@ -128,7 +128,6 @@ class SuperController extends Controller
     }
 }
 
-
     public function delete($id)
     {
         $wisata = M_wisata::find($id);
