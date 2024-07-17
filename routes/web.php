@@ -13,6 +13,7 @@ use App\Http\Controllers\kelolaakun;
 use App\Http\Controllers\kelolaakunController;
 use App\Http\Controllers\LaporanController;
 use App\Http\Controllers\LaporanPenginapanController;
+use App\Http\Controllers\MapsController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\TiketController;
 use App\Http\Controllers\PenginapanController;
@@ -21,6 +22,7 @@ use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\UlasanController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 Auth::routes();
 // Auth::routes(['verify' => true]);
@@ -153,3 +155,6 @@ Route::get('/kategori', 'KategoriController@index');
 Route::get('/kategori/cari', [KategoriController::class, 'cari'])->name('kategori.cari');
 
 // Route::get('/',[SesiController::class, 'sesi']);
+
+//Maps
+Route::resource('maps', MapsController::class);
