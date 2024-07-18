@@ -50,6 +50,8 @@
                     <th scope="col">Alamat</th>             
                     <th scope="col">Qty</th>
                     <th scope="col">Total Harga</th>
+            
+                    
                     {{-- <th scope="col">Aksi</th> --}}
                   </tr>
                 </thead>
@@ -63,6 +65,7 @@
                     <td>{{$data->address}}</td>
                     <td>{{$data->qty}}</td>
                     <td>{{$data->total_price}}</td>
+
                     {{-- <td>{{$data->nama_perusahaan}}</td>
                     <td>{{$data->keterangan}}</td> --}}
                 
@@ -74,6 +77,7 @@
                   @endforeach
                 </tbody>
               </table>
+
             </div>
           </div>
         </div>

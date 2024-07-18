@@ -195,7 +195,11 @@
     <h1>Orders</h1>
     <div class="row">
     @foreach ($data_order as $data)
+    @if ($data->active == 1)
+    <article class="card fl-left" style="background-color:#989898;opacity:0.3">
+    @else 
     <article class="card fl-left">
+    @endif
         <section class="date">
         <time datetime="23th feb">
             <span>{{$loop->iteration}}</span><span>item</span>

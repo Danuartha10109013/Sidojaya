@@ -65,9 +65,10 @@
                     <td>{{$data->total_price}}</td>
                     <td>
                       
-                        @if ($data->status == "ya")
+                        @if ($data->active == 1)
+                        <p>Tiket Sudah Dipakai</p>
                         @else 
-                        <form action="{{ url('/setujui/' . $data->id . '/accept') }}" method="POST" style="display:inline;">
+                        <form action="{{ url('/dipakai/' . $data->id ) }}" method="POST" style="display:inline;">
                             @csrf
                             <button type="submit" class="btn btn-success btn-sm">
                                 <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Proses

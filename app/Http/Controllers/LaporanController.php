@@ -16,7 +16,9 @@ class LaporanController extends Controller
         $id = Auth::user()->id;
         $wisata = M_wisata::where('id_user', $id)->first(); 
         if($wisata) {
-            $data_order = Order::where('id_wisata', $wisata->id)->paginate(10); 
+            $data_order = Order::where('id_wisata', $wisata->id)
+                   ->where('active', 1)
+                   ->paginate(10);
         } else {
             $data_order = []; 
         }
@@ -29,7 +31,15 @@ class LaporanController extends Controller
 
     public function cetaktiket()
     {
-        $data_order = Order::all();
+        $id = Auth::user()->id;
+        $wisata = M_wisata::where('id_user', $id)->first(); 
+        if($wisata) {
+            $data_order = Order::where('id_wisata', $wisata->id)
+                   ->where('active', 1)
+                   ->get();
+        } else {
+            $data_order = []; 
+        }
         return view('admin.laporanadmin.laporan_cetak', compact('data_order',),[
             'data_order' => $data_order 
     ]);
@@ -68,6 +78,25 @@ class LaporanController extends Controller
         return view('admin.pemesanantiket.pemesanan', [
             'data_order' => $data_order
         ]);
+    }
+
+    public function use($id)
+    {
+        // Cari order berdasarkan id
+        $order = Order::find($id);
+    
+        // Periksa apakah order ditemukan
+        if ($order) {
+            // Perbarui kolom 'active' menjadi 1
+            $order->active = 1;
+    
+            // Simpan perubahan ke database
+            $order->save();
+    
+            return redirect()->back();
+        } else {
+            return response()->json(['message' => 'Order not found'], 404);
+        }
     }
 
     

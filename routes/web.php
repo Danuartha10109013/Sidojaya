@@ -130,6 +130,7 @@ Route::get('adm/manajemen-pemesanan', [LaporanController::class, 'pemesanan'])->
 //kelolaakun
 Route::get('adm/manajemen-akun', [kelolaakunController::class, 'index'])->name('manajemen-akun');
 Route::post('/setujui/{id}/accept', [kelolaakunController::class, 'accept']);
+Route::post('/dipakai/{id}', [LaporanController::class, 'use']);
 // Route::get('/kunjungan/{id_kunjungan}', [C_Kunjungan::class, 'detail'])->name('kunjungan.detail');
 // Route::get('/cetak_individu', [C_Kunjungan::class, 'cetakIndividu'])->name('cetakIndividu');
 // Route::get('/cetak_kelompok', [C_Kunjungan::class, 'cetakKelompok'])->name('cetakKelompok');
