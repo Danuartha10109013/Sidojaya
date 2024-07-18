@@ -31,6 +31,7 @@ Route::get('/register-admin', [SuperController::class, 'add'])->name('register-a
 Route::post('/register-store', [SuperController::class, 'store'])->name('register-store');
 // Route::post('/')
 Route::get('/pengunjung',  [PengunjungController::class, 'index'])->name('pengunjung');
+Route::get('/historypeng',  [LaporanController::class, 'history'])->name('historypeng');
 Route::get('/kategori/{id}', [HomeController::class, 'kategori'])->name('kategori-search');
 Route::get('/kategoripengunjung/{id}', [HomeController::class, 'kategoripengunjung'])->name('kategoripengunjung-search');
 Route::get('/event',  [HomeController::class, 'event'])->name('event');
@@ -122,6 +123,9 @@ Route::get('adm/manajemen-laporan', [LaporanController::class, 'index'])->name('
 Route::get('/cetaktiket', [LaporanController::class, 'cetaktiket'])->name('cetak-tiket');
 Route::get('adm/manajemen-laporanpenginapan', [LaporanPenginapanController::class, 'index'])->name('manajemen-laporanpenginapan');
 Route::get('/cetakpenginapan', [LaporanPenginapanController::class, 'cetakpenginapan'])->name('cetak-penginapan');
+
+//pemesanan
+Route::get('adm/manajemen-pemesanan', [LaporanController::class, 'pemesanan'])->name('manajemen-pemesanan');
 
 //kelolaakun
 Route::get('adm/manajemen-akun', [kelolaakunController::class, 'index'])->name('manajemen-akun');

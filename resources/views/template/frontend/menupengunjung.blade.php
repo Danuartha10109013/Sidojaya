@@ -28,6 +28,7 @@
             <ul class="dropdown-menu">
                 <li><a href="#">Saya, ({{ auth()->user()->name }})</a></li> <!-- Menampilkan nama pengguna -->
                 <li role="separator" class="divider"></li>
+                <li><a href="{{ route('historypeng') }}">History Pemesanan</a></li>
                 <li><a href="{{ route('logout') }}">Logout</a></li>
             </ul>
         </li>

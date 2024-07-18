@@ -35,6 +35,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link {{ request()->is('adm/manajemen-pemesanan') ? 'active' : '' }}"
+                            href={{ route('manajemen-pemesanan') }}>
+                            <i class="fa fa-map-signs text-orange"></i>
+                            <span class="nav-link-text">Pemesanan Tiket</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-laporan') ? 'active' : '' }}"
                             href={{ route('manajemen-laporan') }}>
                             <i class="fa fa-map-signs text-orange"></i>

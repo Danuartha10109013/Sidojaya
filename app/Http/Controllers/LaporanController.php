@@ -33,6 +33,28 @@ class LaporanController extends Controller
     ]);
     }
 
+    public function history()
+    {
+        $id = Auth::user()->id;
+        $data_order = Order::with('wisata')->where('id_user', $id)->paginate(10);
+    
+        return view('historypengunjung', compact('data_order'));
+    }
+
+    public function pemesanan(){
+        $id = Auth::user()->id;
+        $wisata = M_wisata::where('id_user', $id)->first(); 
+        if($wisata) {
+            $data_order = Order::where('id_wisata', $wisata->id)->paginate(10); 
+        } else {
+            $data_order = []; 
+        }
+        
+        return view('admin.pemesanantiket.pemesanan', [
+            'data_order' => $data_order
+        ]);
+    }
+
     
 
 

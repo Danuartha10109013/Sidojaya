@@ -19,9 +19,13 @@ class Order extends Model
         'qty',
         'total_price',
         'id_tiket',
-        'id_wisata'
+        'id_wisata',
+        'id_user'
     ];
 
-    
+    public function wisata()
+{
+    return $this->belongsTo(M_wisata::class, 'id_wisata');
+}
 
 }
