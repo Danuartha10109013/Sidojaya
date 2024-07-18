@@ -3,7 +3,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="{{ url('backend/assets/img/brand/brand.png') }}" alt="...">
+                <img src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="...">
             </a>
         </div>
         <div class="navbar-inner">

@@ -44,9 +44,6 @@
                                 </div>
                             </div>
                         </li>
-
-
-
                     </ul>
                     <ul class="navbar-nav align-items-center  ml-auto ml-md-0 ">
 
@@ -54,3 +51,5 @@
                 </div>
             </div>
         </nav>
+    </div>
+</body>

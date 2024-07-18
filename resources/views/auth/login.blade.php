@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,6 +19,7 @@
     <!-- Argon CSS -->
     <link rel="stylesheet" href="{{ url('backend/assets/css/argon.css?v=1.2.0') }}" type="text/css">
 </head>
+
 <body class="bg-default">
     <!-- Main content -->
     <div class="main-content">
@@ -28,44 +30,45 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 m-auto">
                     <div class="card">
-                    <div class="card-header">
-                        <img src="{{ url('backend/assets/img/brand/brand.png') }}" alt="..." style="display: block; margin: 0 auto;">
-                    </div>
-                <div class="card-body">
-    <!-- Your card body content here -->
-                </div>
+                        <div class="card-header">
+                            <img src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="..."
+                                style="display: block; margin: 0 auto;">
+                        </div>
+                        <div class="card-body">
+                            <!-- Your card body content here -->
+                        </div>
 
-                            <form method="POST" action="{{ route('login') }}">
-                                @csrf
-                                <div class="row mb-3 text-left ml-3" style="widht : 80%">
-                                    <label for="email"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('E-Mail Address') }}</label>
-                                    <div class="col-md-6">
-                                        <input id="email" type="email"
-                                            class="form-control @error('email') is-invalid @enderror" name="email"
-                                            value="{{ old('email') }}" required autocomplete="email" autofocus>
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+                        <form method="POST" action="{{ route('login') }}">
+                            @csrf
+                            <div class="row mb-3 text-left ml-3" style="widht : 80%">
+                                <label for="email"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('E-Mail Address') }}</label>
+                                <div class="col-md-6">
+                                    <input id="email" type="email"
+                                        class="form-control @error('email') is-invalid @enderror" name="email"
+                                        value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
-                                <div class="row mb-3 text-left ml-3" style="widht : 80%">
-                                    <label for="password"
-                                        class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
-                                    <div class="col-md-6">
-                                        <input id="password" type="password"
-                                            class="form-control @error('password') is-invalid @enderror" name="password"
-                                            required autocomplete="current-password">
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
+                            </div>
+                            <div class="row mb-3 text-left ml-3" style="widht : 80%">
+                                <label for="password"
+                                    class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                                <div class="col-md-6">
+                                    <input id="password" type="password"
+                                        class="form-control @error('password') is-invalid @enderror" name="password"
+                                        required autocomplete="current-password">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
-                                {{-- <div class="row mb-3">
+                            </div>
+                            {{-- <div class="row mb-3">
                                     <div class="col-md-6 offset-md-4">
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember"
@@ -76,27 +79,27 @@
                                         </div>
                                     </div>
                                 </div> --}}
-                                <div class="row mb-0 ml-3">
-                                    <div class="col-md-8 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            {{ __('Login') }}
-                                        </button>
-                                       
-                                    </div>
+                            <div class="row mb-0 ml-3">
+                                <div class="col-md-8 offset-md-4">
+                                    <button type="submit" class="btn btn-primary">
+                                        {{ __('Login') }}
+                                    </button>
+
                                 </div>
-                                <!-- <div class="row mb-3">
+                            </div>
+                            <!-- <div class="row mb-3">
                                     <label for="password"
                                         class="col-md-4 col-form-label text-md-end">{{ __('Belum memiliki akun? buat akun') }}</label>
                                     <div class="col-md-6">
                                 </div>        -->
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
                     </div>
                 </div>
+                </form>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
     <!-- Footer -->
     <!-- Argon Scripts -->
@@ -123,4 +126,5 @@
         });
     </script>
 </body>
+
 </html>

@@ -3,7 +3,7 @@
         <!-- Brand -->
         <div class="sidenav-header  align-items-center">
             <a class="navbar-brand" href="javascript:void(0)">
-                <img src="{{ url('backend/assets/img/brand/brand.png') }}" alt="...">
+                <img src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="...">
             </a>
         </div>
         <div class="navbar-inner">
@@ -51,7 +51,7 @@
                         <a class="nav-link {{ request()->is('adm/manajemen-Aboutus-wisata') ? 'active' : '' }}"
                             href={{ route('manajemen-aboutus-wisata') }}>
                             <i class="fa fa-map-signs text-orange"></i>
-                            <span class="nav-link-text">Kelola AboutUS</span>
+                            <span class="nav-link-text">About Us</span>
                         </a>
                     </li>
 
@@ -66,8 +66,6 @@
                 <!-- Divider -->
                 <hr class="my-3">
                 <!-- Heading -->
-
-
             </div>
         </div>
     </div>

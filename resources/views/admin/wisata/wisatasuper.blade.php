@@ -44,7 +44,6 @@
                                 <tr>
                                     <th scope="col">NO</th>
                                     <th scope="col">FOTO</th>
-                                    {{-- <th>FOTO</th> --}}
                                     <th scope="col">NAMA WISATA</th>
                                     <th scope="col">HTM</th>
                                     <th scope="col">KONTAK PENGELOLA</th>
