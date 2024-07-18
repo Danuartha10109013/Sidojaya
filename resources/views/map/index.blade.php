@@ -65,13 +65,13 @@
         <div class="point">
             <a href="a" target="_blank">
             <i class="fas fa-location-dot"></i>
-            <p>Wisata Uhuy</p>
+            <p>Jembatan Lori</p>
         </a>
         </div>
         <div class="informasi">
  
-                <h3>Wisata Uhuy</h3>
-                <img src="" alt="ini image nya">
+                <h3>Jembatan Lori</h3>
+                <img src="{{asset('img/galeri/jembatan lori.jpg')}}" alt="ini image nya">
                 <p>ini keterangnnyaa</p>
 
         </div>
