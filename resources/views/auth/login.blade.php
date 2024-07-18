@@ -31,7 +31,7 @@
                 <div class="col-md-6 m-auto">
                     <div class="card">
                         <div class="card-header">
-                            <img src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="..."
+                            <img width="300px" src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="..."
                                 style="display: block; margin: 0 auto;">
                         </div>
                         <div class="card-body">
@@ -40,7 +40,7 @@
 
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
-                            <div class="row mb-3 text-left ml-3" style="widht : 80%">
+                            <div class="row mb-3 text-left ml-3" style="widht : 80%;margin-top:-50px">
                                 <label for="email"
                                     class="col-md-4 col-form-label text-md-end">{{ __('E-Mail Address') }}</label>
                                 <div class="col-md-6">
@@ -79,7 +79,7 @@
                                         </div>
                                     </div>
                                 </div> --}}
-                            <div class="row mb-0 ml-3">
+                            <div class="row mb-3 ml-3">
                                 <div class="col-md-8 offset-md-4">
                                     <button type="submit" class="btn btn-primary">
                                         {{ __('Login') }}
