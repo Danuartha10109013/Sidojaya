@@ -4,26 +4,30 @@
     <section id="hero">
         <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
-           
-                <div class="carousel-inner" role="listbox">
-				 //@foreach ($data_wisata as $data)
+
+            <div class="carousel-inner" role="listbox">
+                //@foreach ($data_wisata as $data)
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url(assets/img/blog/sample.jpg)">
+                    <div class="carousel-item active" style="background-image: url(assets/img/blog/batikecoprint.jpg)">
                         <div class="carousel-container">
                             <div class="container">
-                                <h2 class="animate__animated animate__fadeInDown">Kolam Renang Three Stars</h2>
-                                <p class="animate__animated animate__fadeInUp">Kolam renang three stars ini memiliki 3 kolam renang yang bisa dinikmati pengunjung serta dilengkapi dengan fasilitas seperti tenis meja, mushola, kamar mandi.
+                                <h2 class="animate__animated animate__fadeInDown">Batik Ecoprint</h2>
+                                <p class="animate__animated animate__fadeInUp">Batik ecoprint merupakan produk lokal yang
+                                    dikembangkan oleh masyarakat sebagai kerajinan sekaligus fashion karna motifnya yang
+                                    beragam, setiap helai kain atau pun baju ecoprint memiliki motif dan warna yang unik,
+                                    desain ecoprint sangatlah bisa untuk mengikuti perkembangan zaman
                                 </p>
                                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                     More</a>
                             </div>
                         </div>
                     </div>
-					       //@endforeach
-                    <!-- Slide 2 -->
-                    <!-- Slide 3 -->
-                </div>
-     
+                    //
+                @endforeach
+                <!-- Slide 2 -->
+                <!-- Slide 3 -->
+            </div>
+
             <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
             </a>
@@ -47,16 +51,16 @@
                             Contact person
                         </p>
                         <ul>
-                            @foreach($data_aboutus as $items)
-                            <li><i class="ri-check-double-line"></i> {{$items->nama_aboutus}}
-                            </li>
-                            <li><i class="ri-check-double-line"></i> {{$items->no_telpon}}
-                            </li>
-                            <li><i class="ri-check-double-line"></i> {{$items->nama_perusahaan}}
-                            </li>
+                            @foreach ($data_aboutus as $items)
+                                <li><i class="ri-check-double-line"></i> {{ $items->nama_aboutus }}
+                                </li>
+                                <li><i class="ri-check-double-line"></i> {{ $items->no_telpon }}
+                                </li>
+                                <li><i class="ri-check-double-line"></i> {{ $items->nama_perusahaan }}
+                                </li>
                         </ul>
                         <p class="fst-italic">
-                            {{$items->keterangan}}
+                            {{ $items->keterangan }}
                         </p>
                     </div>
                     @endforeach

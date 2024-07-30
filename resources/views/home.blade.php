@@ -8,13 +8,15 @@
             <div class="carousel-inner" role="listbox">
                 //@foreach ($data_wisata as $data)
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" style="background-image: url(assets/img/blog/sample.jpg)">
+                    {{-- <div class="carousel-item active" style="background-image: url(assets/img/blog/sample.jpg)"> --}}
+                    <div class="carousel-item active" style="background-image: url(assets/img/blog/batikecoprint.jpg)">
                         <div class="carousel-container">
                             <div class="container">
-                                <h2 class="animate__animated animate__fadeInDown">Kolam Renang Three Stars</h2>
-                                <p class="animate__animated animate__fadeInUp">Kolam renang three stars ini memiliki 3 kolam
-                                    renang yang bisa dinikmati pengunjung serta dilengkapi dengan fasilitas seperti tenis
-                                    meja, mushola, kamar mandi.
+                                <h2 class="animate__animated animate__fadeInDown">Batik Ecoprint</h2>
+                                <p class="animate__animated animate__fadeInUp">Batik ecoprint merupakan produk lokal yang
+                                    dikembangkan oleh masyarakat sebagai kerajinan sekaligus fashion karna motifnya yang
+                                    beragam, setiap helai kain atau pun baju ecoprint memiliki motif dan warna yang unik,
+                                    desain ecoprint sangatlah bisa untuk mengikuti perkembangan zaman
                                 </p>
                                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                     More</a>
@@ -42,9 +44,9 @@
             <div class="container">
                 <div class="row content">
                     <div class="col-lg-6">
-                        <h2>Platform Wisata Subang</h2>
-                        <h3>Subang Gateway
-                        </h3>
+                        <h2>Platform Wisata Sidajaya</h2>
+                        {{-- <h3>Subang Gateway
+                        </h3> --}}
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0">
                         <p>
