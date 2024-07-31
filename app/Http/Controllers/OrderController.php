@@ -50,6 +50,7 @@ class OrderController extends Controller
         $nama_tiket=$this->M_tiket->get_jenis_tiket($request->id_tiket);
         
         
+        
 
         // Set your Merchant Server Key
         \Midtrans\Config::$serverKey = config('midtrans.server_key');

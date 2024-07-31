@@ -9,14 +9,18 @@
                 //@foreach ($data_wisata as $data)
                     <!-- Slide 1 -->
                     {{-- <div class="carousel-item active" style="background-image: url(assets/img/blog/sample.jpg)"> --}}
-                    <div class="carousel-item active" style="background-image: url(assets/img/blog/batikecoprint.jpg)">
+                    <div class="carousel-item active" style="background-image: url(assets/img/blog/desasidajaya.jpg)">
                         <div class="carousel-container">
                             <div class="container">
-                                <h2 class="animate__animated animate__fadeInDown">Batik Ecoprint</h2>
-                                <p class="animate__animated animate__fadeInUp">Batik ecoprint merupakan produk lokal yang
-                                    dikembangkan oleh masyarakat sebagai kerajinan sekaligus fashion karna motifnya yang
-                                    beragam, setiap helai kain atau pun baju ecoprint memiliki motif dan warna yang unik,
-                                    desain ecoprint sangatlah bisa untuk mengikuti perkembangan zaman
+                                <h2 class="animate__animated animate__fadeInDown">Desa Sidajaya</h2>
+                                <p class="animate__animated animate__fadeInUp">Menurut penuturan para orang tua terdahulu
+                                    serta tokoh-tokoh masyarakat yang dapat dipercaya, bahwa Pemerintah Desa Sidajaya
+                                    awalnya adalah Desa Tanjung yang di pecah menjadi Desa Sidamulya pada tahun
+                                    1975. Atau biasa di sebut CIGARUKGAK Pada masa belanda masuk ke Indonesia
+                                    Setelah itu kemudian pada tahun 1980 Desa Sidamulya di pecah Kembali menjadi dua Desa
+                                    yaitu Desa Sidamulya dan Desa Sidajaya pada tahun 1980 sampai dengan tahun 2022. Kata
+                                    Sidajaya itu berasal dari dua kata yaitu SIDA dan JAYA, atau kata orang jawa biasa
+                                    menyebutnya, JADI JAYA.
                                 </p>
                                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                     More</a>
