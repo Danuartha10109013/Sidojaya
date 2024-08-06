@@ -115,7 +115,7 @@ Route::get('/no-access', function () {
 //penginapan
 Route::get('/penginapan/{id}', [ReservasiController::class, 'penginapan'])->name('penginapan');
 Route::post('/checkoutpeng', [ReservasiController::class, 'checkoutpeng']);
-Route::post('/midtrans-callback2', [ReservasiController::class. 'callback2']);
+Route::post('/midtrans-callback2', [ReservasiController::class, 'callback2']);
 Route::get('/invoicepeng/{id}', [ReservasiController::class, 'invoicepeng']);
 
 //laporan
