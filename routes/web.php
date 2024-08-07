@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\About_sidajaya;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\FasilitasController;
@@ -115,7 +117,7 @@ Route::get('/no-access', function () {
 //penginapan
 Route::get('/penginapan/{id}', [ReservasiController::class, 'penginapan'])->name('penginapan');
 Route::post('/checkoutpeng', [ReservasiController::class, 'checkoutpeng']);
-Route::post('/midtrans-callback2', [ReservasiController::class. 'callback2']);
+Route::post('/midtrans-callback2', [ReservasiController::class, 'callback2']);
 Route::get('/invoicepeng/{id}', [ReservasiController::class, 'invoicepeng']);
 
 //laporan
@@ -162,4 +164,11 @@ Route::get('/kategori/cari', [KategoriController::class, 'cari'])->name('kategor
 // Route::get('/',[SesiController::class, 'sesi']);
 
 //Maps
+<<<<<<< HEAD
 Route::get('maps', [MapsController::class, 'index'])->name('maps');
+=======
+Route::resource('maps', MapsController::class);
+
+//About Sidajaya
+Route::get('about',[About_sidajaya::class,'index'])->name('aboutsidajaya');
+>>>>>>> 6f141023bb5200957a042cbf3035206c8c3c4833

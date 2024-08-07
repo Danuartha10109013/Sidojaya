@@ -123,7 +123,7 @@
     }
 
     .row:last-child .card:last-of-type .card-cont h3 {
-        text-decoration: line-through
+        text-decoration: none
     }
 
     .card-cont>div {
@@ -142,7 +142,7 @@
         padding: 5% 5% 0 0
     }
 
-    .card-cont .even-info p {
+.card-cont .even-info p {
         padding: 30px 50px 0 0
     }
 
@@ -202,7 +202,7 @@
     @endif
         <section class="date">
         <time datetime="23th feb">
-            <span>{{$loop->iteration}}</span><span>item</span>
+            <span>{{$loop->iteration}}</span>
         </time>
         </section>
         <section class="card-cont">
@@ -221,7 +221,7 @@
             <p>Quantity: {{$data->qty}}</p>
             <p>Total Price: {{$data->total_price}}</p>
         </div>
-        <a href=>Detail</a>
+
         </section>
     </article>
     @endforeach
