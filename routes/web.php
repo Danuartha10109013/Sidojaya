@@ -162,4 +162,4 @@ Route::get('/kategori/cari', [KategoriController::class, 'cari'])->name('kategor
 // Route::get('/',[SesiController::class, 'sesi']);
 
 //Maps
-Route::resource('maps', MapsController::class);
+Route::get('maps', [MapsController::class, 'index'])->name('maps');

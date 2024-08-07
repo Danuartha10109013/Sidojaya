@@ -18,6 +18,7 @@
             </ul>
         </li>
         <li><a href="{{ route('event') }}">Event Wisata</a></li>
+        <li><a href="{{ route('maps') }}">Maps</a></li>
         <li><a href="{{ route('login') }}">Login</a></li>
         <li><a href="{{ route('register') }}">Registrasi</a></li>
     </ul>
