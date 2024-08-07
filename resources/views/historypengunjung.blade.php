@@ -142,7 +142,7 @@
         padding: 5% 5% 0 0
     }
 
-    .card-cont .even-info p {
+.card-cont .even-info p {
         padding: 30px 50px 0 0
     }
 

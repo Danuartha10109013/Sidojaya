@@ -1,4 +1,6 @@
 <?php
+
+use App\Http\Controllers\About_sidajaya;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\FasilitasController;
@@ -163,3 +165,6 @@ Route::get('/kategori/cari', [KategoriController::class, 'cari'])->name('kategor
 
 //Maps
 Route::resource('maps', MapsController::class);
+
+//About Sidajaya
+Route::get('about',[About_sidajaya::class,'index'])->name('aboutsidajaya');
