@@ -31,6 +31,10 @@
                   <label for="total">Id wisata:</label>
                   <input class="form-control" type="number" id="id_wisata" name="id_wisata" rows="3" required readonly value="{{$data_wisata->id}}"></input>
               </div> --}}
+              <tr style="display:none">
+                <td>id_user</td>
+                <td> {{Auth::id()}}</td>
+              </tr>
               <tr>
                 <td>Nama Wisata</td>
                 <td> : {{$wisata->nama_wisata}}</td>

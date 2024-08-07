@@ -82,21 +82,17 @@
 
                                             {{-- {{ $gambar->nama_gambar }} --}}
                                             @if ($cek_foto->isEmpty())
-                                                <a href="{{ route('foto-upload', $data->id) }}"
-                                                    class="btn btn-sm btn-info">Upload Gambar</a>
+                                                <a href="{{ route('foto-upload', $data->id) }}" class="btn btn-sm btn-info mb-2">Upload Gambar</a>
                                             @else
-                                                <a href="{{ route('foto-edit', $data->id) }}"
-                                                    class="btn btn-sm btn-dark">Edit Gambar</a>
+                                                <a href="{{ route('foto-edit', $data->id) }}" class="btn btn-sm btn-dark mb-2">Edit Gambar</a>
                                                 <br>
-                                                <a href="{{ route('foto-hapus', $gambar->id) }}"
-                                                    class="btn btn-danger btn-sm">hapus gambar</a>
+                                                <a href="{{ route('foto-hapus', $gambar->id) }}" class="btn btn-danger btn-sm mb-2">Hapus Gambar</a>
                                             @endif
                                             <br>
-                                            <a href="{{ route('detail-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-primary">Detail</a>
+                                            <a href="{{ route('detail-wisata', $data->id) }}" class="btn btn-sm btn-primary mb-2">Detail</a>
                                             <br>
-                                            <a href="{{ route('edit-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-warning">edit</a>
+                                            <a href="{{ route('edit-wisata', $data->id) }}" class="btn btn-sm btn-warning mb-2">Edit</a>
+
                                             {{-- <a href="{{ route('delete-wisata', $data->id) }}"
                                                 class="btn btn-sm btn-danger">hapus</a> --}}
                                         </td>

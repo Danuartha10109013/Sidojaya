@@ -28,13 +28,6 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('adm/manajemen-penginapan') ? 'active' : '' }}"
-                            href={{ route('manajemen-penginapan') }}>
-                            <i class="fa fa-map-signs text-orange"></i>
-                            <span class="nav-link-text">Kelola Penginapan</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-pemesanan') ? 'active' : '' }}"
                             href={{ route('manajemen-pemesanan') }}>
                             <i class="fa fa-map-signs text-orange"></i>
@@ -48,13 +41,13 @@
                             <span class="nav-link-text">Laporan Tiket</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-laporanpenginapan') ? 'active' : '' }}"
                             href={{ route('manajemen-laporanpenginapan') }}>
                             <i class="fa fa-map-signs text-orange"></i>
                             <span class="nav-link-text">Laporan Penginapan</span>
                         </a>
-                    </li>
+                    </li> --}}
                     {{-- <li class="nav-item">
                         <a class="nav-link {{ request()->is('adm/manajemen-kategori-wisata') ? 'active' : '' }}"
                             href="{{ route('manajemen-kategori-wisata') }}">

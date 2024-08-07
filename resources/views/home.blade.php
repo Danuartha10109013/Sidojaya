@@ -13,14 +13,7 @@
                         <div class="carousel-container">
                             <div class="container">
                                 <h2 class="animate__animated animate__fadeInDown">Desa Sidajaya</h2>
-                                <p class="animate__animated animate__fadeInUp">Menurut penuturan para orang tua terdahulu
-                                    serta tokoh-tokoh masyarakat yang dapat dipercaya, bahwa Pemerintah Desa Sidajaya
-                                    awalnya adalah Desa Tanjung yang di pecah menjadi Desa Sidamulya pada tahun
-                                    1975. Atau biasa di sebut CIGARUKGAK Pada masa belanda masuk ke Indonesia
-                                    Setelah itu kemudian pada tahun 1980 Desa Sidamulya di pecah Kembali menjadi dua Desa
-                                    yaitu Desa Sidamulya dan Desa Sidajaya pada tahun 1980 sampai dengan tahun 2022. Kata
-                                    Sidajaya itu berasal dari dua kata yaitu SIDA dan JAYA, atau kata orang jawa biasa
-                                    menyebutnya, JADI JAYA.
+                                <p class="animate__animated animate__fadeInUp">Platform desa wisata sidajaya ini dibuat dengan tujuan menampilkan informasi mengenai tempat-tempat wisata yang ada di desa sidajaya dan bertujuan mempermudah interaksi pengunjung, pengelola tempat wisata, dan pengelola platform dengan adanya fitur fitur menarik seperti pendaftaran wisata, pemesanan, dan kelola wisata.
                                 </p>
                                 <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read
                                     More</a>
