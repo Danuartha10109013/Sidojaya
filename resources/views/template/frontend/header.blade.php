@@ -29,10 +29,10 @@
 
 <body>
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center">
+    <header id="header" class=" d-flex align-items-center">
         <div class="container d-flex align-items-center">
-            <h1 class="logo me-auto"> <img src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="..."
-                    style="max-width: 500px; height: auto;"></h1>
+            <h1 class="logoxx me-auto"> <img src="{{ url('backend/assets/img/brand/wisata.png') }}" alt="..."
+                    style="max-width: 70px; height: auto;padding:0;"></h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
             @include('template.frontend.menu')

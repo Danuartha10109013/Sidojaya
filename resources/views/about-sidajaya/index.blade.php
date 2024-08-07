@@ -3,18 +3,6 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-      <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Builder Max</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="{{asset('temps')}}/css/bootstrap.min.css">
       <!-- style css -->
@@ -57,56 +45,20 @@
                         <div class="row">
                            <div class="col-sm-12">
                               <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BUILDER CONSTRUCTION SERVICES</h1>
+                                 <h1 class="banner_taital">DESA SIDAJAYA SUBANG</h1>
                                  <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                                  <div class="btn_main">
-                                    <div class="started_text active"><a href="{{asset('temps')}}/#">Contact US</a></div>
-                                    <div class="started_text"><a href="{{asset('temps')}}/#">About Us</a></div>
+
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BUILDER CONSTRUCTION SERVICES</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                                 <div class="btn_main">
-                                    <div class="started_text active"><a href="{{asset('temps')}}/#">Contact US</a></div>
-                                    <div class="started_text"><a href="{{asset('temps')}}/#">About Us</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="carousel-item">
-                     <div class="container">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <div class="banner_taital_main">
-                                 <h1 class="banner_taital">BUILDER CONSTRUCTION SERVICES</h1>
-                                 <p class="banner_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                                 <div class="btn_main">
-                                    <div class="started_text active"><a href="{{asset('temps')}}/#">Contact US</a></div>
-                                    <div class="started_text"><a href="{{asset('temps')}}/#">About Us</a></div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                  
+               
                </div>
-               <a class="carousel-control-prev" href="{{asset('temps')}}/#my_slider" role="button" data-slide="prev">
-               <i class="fa fa-angle-left"></i>
-               </a>
-               <a class="carousel-control-next" href="{{asset('temps')}}/#my_slider" role="button" data-slide="next">
-               <i class="fa fa-angle-right"></i>
-               </a>
+
             </div>
          </div>
         <!-- banner section end -->
