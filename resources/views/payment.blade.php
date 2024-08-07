@@ -52,6 +52,9 @@
                 <div class="form-group">
                     <input class="form-control" type="number" id="id_wisata" name="id_wisata" rows="3" required readonly hidden value="{{$data_wisata->id}}"></input>
                 </div>
+                <div class="form-group">
+                    <input class="form-control" type="number" id="id_user" name="id_user" rows="3" required readonly hidden value="{{Auth::id()}}"></input>
+                </div>
                 <div class="mb-3">
                     <label for="qty" class="form-label">Mau Pesan Berapa?</label>
                     {{-- <input type="text" name="wisata" class="" hidden value="{{$data_wisata->nama_wisata}}"> --}}

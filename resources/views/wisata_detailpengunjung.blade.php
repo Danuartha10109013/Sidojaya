@@ -72,14 +72,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-sm-2">
+                                    {{-- <div class="col-sm-2">
                                         <div class="card border-primary text-center">
                                             <div class="card-body">
                                                 <h4>Reservasi Penginapan</h4>
                                                 <a href="{{ route('penginapan', $data_wisata->id) }}">Klik disini</a>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                                 <!-- Ulasan Section -->
@@ -94,7 +94,7 @@
                                                         <h5 class="card-title">{{ $review->nama }}</h5>
                                                         <p class="card-text">
                                                             @for ($i = 0; $i < $review->rating; $i++)
-                                                                &#9733; <!-- Unicode symbol for star -->
+                                                                <span style="color: gold;">&#9733;</span>
                                                             @endfor
                                                         </p>
                                                         <p class="card-text">{{ $review->deskripsi }}</p>
@@ -105,6 +105,7 @@
                                         </div>
                                     </div>
                                 </section><!-- End Ulasan Section -->
+                                
 
                                 <!-- Form ulasan -->
                                 @auth

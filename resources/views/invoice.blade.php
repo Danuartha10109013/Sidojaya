@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tiket WIsata</title>
+    <title>Tiket Wisata</title>
     <link href="{{ asset('css/invoice.css') }}" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -40,14 +40,14 @@
                     </tr>
                     <tr>
                         <td>Nama Wisata</td>
-                        <td> : {{$wisata->nama_wisata}}</td>
+                        <td>{{$wisata->nama_wisata}}</td>
                     </tr>
                 </table>
+                <a href="{{ route('pengunjung') }}" class="btn btn-primary mt-3">Home</a>
+                <a href="{{ route('historypeng') }}" class="btn btn-secondary mt-3">History Pemesanan</a>
             </div>
         </div>
     </div>
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
