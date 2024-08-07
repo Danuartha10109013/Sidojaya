@@ -164,11 +164,11 @@ Route::get('/kategori/cari', [KategoriController::class, 'cari'])->name('kategor
 // Route::get('/',[SesiController::class, 'sesi']);
 
 //Maps
-<<<<<<< HEAD
+
 Route::get('maps', [MapsController::class, 'index'])->name('maps');
-=======
-Route::resource('maps', MapsController::class);
+
+// Route::resource('maps', MapsController::class);
 
 //About Sidajaya
 Route::get('about',[About_sidajaya::class,'index'])->name('aboutsidajaya');
->>>>>>> 6f141023bb5200957a042cbf3035206c8c3c4833
+
