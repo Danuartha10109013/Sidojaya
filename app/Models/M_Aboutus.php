@@ -12,11 +12,22 @@ class M_Aboutus extends Model
     protected $table = "aboutus";
 
     protected $fillable = [
-        'nama_aboutus',
-        'no_telpon',
-        'nama_perusahaan',
+        'nama',
+        'sub_judul',
         'keterangan',
+        'visi',
+        'misi',
+        'no_telpon',
+        'peta',
+        'ket_wilayah',
+        'monografi',
+        'gambar_monografi',
+        'gambar_struktur',
+        'link_wa',
+        'link_ig',
+        'link_fb',
     ];
+    
 
     public function getData(){{
             return self::all();

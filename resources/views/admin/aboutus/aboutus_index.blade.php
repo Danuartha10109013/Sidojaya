@@ -39,43 +39,73 @@
                         </button>
                     </div>
                 @endif
-                <div class="card">
 
-                    <div class="table-responsive">
-                        <!-- Projects table -->
-                        <table class="table align-items-center table-flush">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col">No</th>
-                                    <th scope="col">Gmail</th>
-                                    <th scope="col">No Telpon</th>
-                                    <th scope="col">NAMA Perusahaan</th>
-                                    <th scope="col">Keterangan</th>
-                                    <th scope="col">AKSI</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($data_aboutus as $data)
+                <!-- Projects table -->
+                
+                <div class="card shadow mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="datatablesSimple" class="table mt-4 table-striped">
+                                <thead class="thead-light">
                                     <tr>
-                                        <th scope="row">{{ $loop->iteration }}</th>
-                                        <td>{{ $data->nama_aboutus }}</td>
-                                        <td>{{ $data->no_telpon }}</td>
-                                        <td>{{ $data->nama_perusahaan }}</td>
-                                        <td>{{ $data->keterangan }}</td>
-
-                                        <td>
-                                            <a href="{{ route('edit-aboutus-wisata', $data->id) }}"
-                                                class="btn btn-sm btn-warning">edit</a>
-                                            {{-- <a href="{{route('hapus-aboutus-wisata',$data->id)}}" class="btn btn-sm btn-danger">hapus</a> --}}
-                                        </td>
+                                        <b>
+                                        <th scope="col" style="min-width: 120px;">No Telpon</th>
+                                        <th scope="col" style="min-width: 150px;">Judul</th>
+                                        <th scope="col" style="min-width: 150px;">Sub Judul</th>
+                                        <th scope="col" style="min-width: 200px;">Keterangan</th>
+                                        <th scope="col" style="min-width: 150px;">Visi</th>
+                                        <th scope="col" style="min-width: 150px;">Misi</th>
+                                        <th scope="col" style="min-width: 120px;">Peta</th>
+                                        <th scope="col" style="min-width: 180px;">Keterangan Peta</th>
+                                        <th scope="col" style="min-width: 150px;">Monografi</th>
+                                        <th scope="col" style="min-width: 150px;">Gambar Monografi</th>
+                                        <th scope="col" style="min-width: 150px;">Gambar Struktur</th>
+                                        <th scope="col" style="min-width: 150px;">Link WhatsApp</th>
+                                        <th scope="col" style="min-width: 150px;">Link Instagram</th>
+                                        <th scope="col" style="min-width: 150px;">Link Facebook</th>
+                                        <th scope="col" style="min-width: 100px;">AKSI</th>
+                                    </b>
                                     </tr>
-                                @endforeach
-
-                            </tbody>
-                        </table>
+                                </thead>
+                                <tbody class="table-group-divider">
+                                    @foreach ($data_aboutus as $data)
+                                        <tr>
+                                            <td>{{ $data->no_telpon }}</td>
+                                            <td>{{ $data->nama }}</td>
+                                            <td>{{ $data->sub_judul }}</td>
+                                            <td class="overflow-auto" style="max-height: 100px;">
+                                                {{ Str::words($data->keterangan, 10, '...') }}
+                                            </td>
+                                            <td>{{ $data->visi }}</td>
+                                            <td class="overflow-auto" style="max-height: 100px;">
+                                                {{ Str::words($data->misi, 10, '...') }}
+                                            </td>
+                                            <td><img src="{{ asset('upload'.'/' . $data->peta) }}" width="90%" alt="Peta Desa Sidajaya"></td>
+                                            
+                                            <td class="overflow-auto" style="max-height: 100px;">
+                                                {{ Str::words($data->ket_wilayah, 10, '...') }}
+                                            </td>
+                                            <<td class="overflow-auto" style="max-height: 100px;">
+                                                {{ Str::words($data->monografi, 10, '...') }}
+                                            </td>
+                                            <td><img src="{{ asset('upload'.'/' . $data->gambar_monografi) }}" width="90%" alt="Gambar Monografi"></td>
+                                            <td><img src="{{ asset('upload'.'/' . $data->gambar_struktur) }}" width="90%" alt="Gambar Monografi"></td>
+                                            
+                                            <td>{{ $data->link_wa }}</td>
+                                            <td>{{ $data->link_ig }}</td>
+                                            <td>{{ $data->link_fb }}</td>
+                                            <td>
+                                                <a href="{{ route('edit-aboutus-wisata', $data->id) }}"
+                                                   class="btn btn-sm btn-warning">edit</a>
+                                                {{-- <a href="{{route('hapus-aboutus-wisata',$data->id)}}" class="btn btn-sm btn-danger">hapus</a> --}}
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
-
+                
         </div>
     @endsection
