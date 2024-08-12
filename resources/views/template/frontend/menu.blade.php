@@ -10,6 +10,7 @@
             </div>
         </nav> --}}
         <li><a href="{{ route('home') }}" class="active">Beranda</a></li>
+        <li><a href="{{ route('aboutsidajaya') }}">Profil Desa</a></li>
         <li class="dropdown"><a href="#"><span>Destinasi Wisata</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
                 @foreach ($data_kategori as $data)
